@@ -1,0 +1,22 @@
+<div *ngIf="cartItem.length === 0" class="alert alert-info">Cart Empty</div>
+
+<div *ngIf="cartItem.length>0">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of cartItem">
+        <td>{{book.id}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.genre}}</td>
+        <td>{{book.price}}</td>
+    </tbody>
+  </table>
+</div>
+

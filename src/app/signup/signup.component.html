@@ -1,0 +1,61 @@
+<div class="container">
+    <h2>Register Here</h2>
+    <form action="/action_page.php" class="was-validated">
+      <div class="form-group">
+        <label for="uname">First Name:</label>
+        <input type="text" class="form-control" id="fname" placeholder="Enter first name" name="fname" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="uname">Middle Name:</label>
+        <input type="text" class="form-control" id="mname" placeholder="Enter middle name" name="mname">
+      </div>
+      
+      <div class="form-group">
+        <label for="uname">Last Name:</label>
+        <input type="text" class="form-control" id="lname" placeholder="Enter last name" name="lname" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="uname">DOB:</label>
+        <input type="date" class="form-control" id="dob" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="uname">Contact Number:</label>
+        <input type="number" class="form-control" id="contact" placeholder="Enter contact number (without country code)" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="uname">Address:</label>
+        <input type="text" class="form-control" id="lname" placeholder="Enter address" name="address" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+       
+      <div class="form-group">
+        <label for="pwd">Set Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      
+      <div class="form-group form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="remember" required> I agree with Policies.
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Check this checkbox to continue.</div>
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="goToLogin()">Submit</button>
+    </form>
+</div>
+  

@@ -1,0 +1,11 @@
+.container-fluid{
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 70px;
+    font-style: italic;
+}
+
+.card-text{
+    color: white;
+    font-size: large;
+}
