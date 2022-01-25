@@ -1,22 +1,28 @@
-<div *ngIf="cartItem.length === 0" class="alert alert-info">Cart Empty</div>
+<div *ngIf="cartItemArray.length === 0" class="alert alert-info">Cart Empty</div>
 
-<div *ngIf="cartItem.length>0">
+<div *ngIf="cartItemArray.length>0">
   <table class="table table-bordered">
     <thead>
       <tr>
         <th>ID</th>
         <th>Title</th>
         <th>Genre</th>
-        <th>Price</th>
+        <th>Total Cost</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let book of cartItem">
-        <td>{{book.id}}</td>
-        <td>{{book.title}}</td>
-        <td>{{book.genre}}</td>
-        <td>{{book.price}}</td>
+      <tr *ngFor="let item of cartItemArray">
+        <td>{{item.productDetails.id}}</td>
+        <td>{{item.productDetails.title}}</td>
+        <td>{{item.productDetails.genre}}</td>
+        <td>{{item.totalCost}}</td>
+        <td>
+          <button type="button" class="btn btn-light" (click)="decQtyInCart(item)" ><strong>-</strong></button>
+          {{item.qty}}
+          <button type="button" class="btn btn-light" (click)="incQtyInCart(item)" ><strong>+</strong></button>
+        </td>
     </tbody>
   </table>
+  <h3 class="text-center">Grand Total: {{grandTotal}}</h3>
 </div>
 

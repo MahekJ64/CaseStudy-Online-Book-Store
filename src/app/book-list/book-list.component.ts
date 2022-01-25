@@ -11,6 +11,8 @@ import { ProductServiceService } from '../Services/product-service.service';
 export class BookListComponent implements OnInit {
 
   books: Product[] =[]
+  enteredBook=""
+  searchedBook: Product = {id:0,title:"",genre:"",price:0}
 
   constructor(private productService: ProductServiceService, private cartService: CartServiceService) { }
 
@@ -22,5 +24,11 @@ export class BookListComponent implements OnInit {
 
   addToCart(book:Product){
     this.cartService.addToCart(book)
+  //  window.alert('Your product has been added to the cart!');
+  }
+
+  searchBook(enteredBook:string){
+    this.productService.searchBook(enteredBook)
+   // this.searchedBook = {id:0,title:this.enteredBook,genre:"",price:0}
   }
 }

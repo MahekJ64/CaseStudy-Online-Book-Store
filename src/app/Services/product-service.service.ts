@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { window } from 'rxjs';
 import { Product } from 'src/app/Model/product';
 
 @Injectable({
@@ -15,4 +16,18 @@ export class ProductServiceService {
   ]
 
   constructor() { }
+
+  searchBook(enteredBook:string){
+    let bookIsPresent: boolean = false
+    this.bookList.forEach((value, index) => {
+      if(value.title == enteredBook){
+        alert("Book Found: " + value.title +" / "+ value.genre +" / "+ value.price)
+        bookIsPresent = true
+      }
+    })
+
+    if(bookIsPresent == false){
+      alert("Book Not Found !")
+    }
+  }
 }

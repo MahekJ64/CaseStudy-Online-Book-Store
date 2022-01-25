@@ -1,3 +1,10 @@
+<div class="container">
+  <input type="text" placeholder="Search a book" name="enteredBook" [(ngModel)]="enteredBook" >
+  <button type="button" (click)="searchBook(enteredBook)" >🔍</button>
+</div>
+
+<br><br>
+
 <table class="table table-bordered">
     <thead>
       <tr>
@@ -13,6 +20,6 @@
         <td>{{book.title}}</td>
         <td>{{book.genre}}</td>
         <td>{{book.price}}</td>
-        <td><button type="button button-bg-success" (click)="addToCart(book)">Add To Cart</button></td>
+        <td><button type="button" class="btn btn-primary" (click)="addToCart(book)">Add To Cart</button></td>
     </tbody>
   </table>
